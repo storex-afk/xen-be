@@ -9,6 +9,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CommonModule } from './common/common.module';
 import { ReferralModule } from './referral/referral.module';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { ReferralModule } from './referral/referral.module';
     MongooseModule.forRoot(process.env.DB_URI),
     CommonModule,
     ReferralModule,
+    HttpModule,
   ],
   controllers: [AppController],
   providers: [AppService],

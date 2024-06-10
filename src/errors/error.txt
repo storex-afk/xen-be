@@ -7829,3 +7829,32 @@ Potential solutions:
     at /Users/Aimes/programs/project/delta/template-be/node_modules/@nestjs/core/injector/instance-loader.js:68:13
     at async Promise.all (index 0)
     at InstanceLoader.createInstancesOfControllers (/Users/Aimes/programs/project/delta/template-be/node_modules/@nestjs/core/injector/instance-loader.js:67:9)
+2024-06-10T17:03:52.048Z: 📢 Starting Nest application...
+2024-06-10T17:03:52.080Z: 📢 MailerModule dependencies initialized
+2024-06-10T17:03:52.080Z: 📢 MongooseModule dependencies initialized
+2024-06-10T17:03:52.080Z: 📢 CommonModule dependencies initialized
+2024-06-10T17:03:52.081Z: 📢 JwtModule dependencies initialized
+2024-06-10T17:03:52.081Z: 📢 HttpModule dependencies initialized
+2024-06-10T17:03:52.081Z: 📢 AdminModule dependencies initialized
+2024-06-10T17:03:52.081Z: 📢 ConfigHostModule dependencies initialized
+2024-06-10T17:03:52.082Z: 📢 AppModule dependencies initialized
+2024-06-10T17:03:52.082Z: 📢 ConfigModule dependencies initialized
+2024-06-10T17:03:52.289Z: 📢 MailerCoreModule dependencies initialized
+2024-06-10T17:03:52.289Z: 📢 MailModule dependencies initialized
+2024-06-10T17:03:52.321Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-10T17:03:52.325Z: 📢 MongooseModule dependencies initialized
+2024-06-10T17:03:52.325Z: 📢 MongooseModule dependencies initialized
+2024-06-10T17:03:52.325Z: 📢 ReferralModule dependencies initialized
+2024-06-10T17:03:52.325Z: 📢 UserModule dependencies initialized
+2024-06-10T17:03:52.325Z: 📢 AuthModule dependencies initialized
+2024-06-10T17:03:52.328Z: 📢 AppController {/api}:
+2024-06-10T17:03:52.330Z: 📢 Mapped {/api, GET} route
+2024-06-10T17:03:52.330Z: 📢 Mapped {/api/country, GET} route
+2024-06-10T17:03:52.330Z: 📢 AuthController {/api/auth}:
+2024-06-10T17:03:52.331Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-10T17:03:52.331Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-10T17:03:52.331Z: 📢 Mapped {/api/auth/forgot password, POST} route
+2024-06-10T17:03:52.332Z: 📢 Mapped {/api/auth, PUT} route
+2024-06-10T17:03:52.332Z: 📢 UserController {/api/user}:
+2024-06-10T17:03:52.333Z: 📢 AdminController {/api/admin}:
+2024-06-10T17:03:52.337Z: 📢 Nest application successfully started
