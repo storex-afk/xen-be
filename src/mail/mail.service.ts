@@ -9,17 +9,22 @@ export class MailService {
     const url = `${
       process.env.appUrl
     }/auth/confirm-account?token=${token}&id=${user._id.toString()}`;
-    await this.mailerService.sendMail({
-      to: user.email,
-      // from: '"Support Team" <support@example.com>', // override default from
-      subject: 'Welcome',
-      template: './confirmation', // `.hbs` extension is appended automatically
-      context: {
-        // ✏️ filling curly brackets with content
-        name: user.fullName,
-        url,
-      },
-    });
+    try {
+      console.log(user, token);
+      await this.mailerService.sendMail({
+        to: user.email,
+        // from: '"Support Team" <support@example.com>', // override default from
+        subject: 'Welcome',
+        template: './confirmation', // `.hbs` extension is appended automatically
+        context: {
+          // ✏️ filling curly brackets with content
+          name: user.fullName,
+          url,
+        },
+      });
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   async resendConfirmation(user, token: string) {

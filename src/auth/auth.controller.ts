@@ -14,11 +14,22 @@ export class AuthController {
     return await this.authService.login(body);
   }
 
-  @Post('forgot password')
+  @Post('forgot-password')
   async forgotPassword(@Body() body) {
     return await this.authService.forgotPassword(body);
   }
 
-  @Put()
-  async resetPassword() {}
+  @Put('reset-password')
+  async resetPassword(@Body() body) {
+    return await this.authService.resetPassword(body);
+  }
+
+  @Post('confirm-account')
+  async confirmAccount(@Body() body) {
+    return await this.authService.confirmAccount(body);
+  }
+  @Post('resend-otp')
+  async resendOtp(@Body() body) {
+    return await this.authService.resendOtp(body);
+  }
 }

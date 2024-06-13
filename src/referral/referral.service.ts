@@ -2,11 +2,13 @@ import { NotFoundException, Injectable } from '@nestjs/common';
 import { Referral } from './referral.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-
+import { User } from 'src/user/user.schema';
+import { ObjectId } from 'mongodb';
 @Injectable()
 export class ReferralService {
   constructor(
     @InjectModel('Referral') private referralModel: Model<Referral>,
+    @InjectModel('User') private userModel: Model<User>,
   ) {}
 
   async saveData(payload) {
@@ -22,5 +24,28 @@ export class ReferralService {
       throw new NotFoundException('Invalid Referral');
     }
     return referral;
+  }
+
+  async getReferralDetails(payload) {
+    const referralDetails = await (
+      await this.referralModel.findOne(payload)
+    ).toJSON();
+    const referrals = await this.userModel
+      .aggregate([
+        {
+          $match:
+            /**
+             * query: The query in MQL.
+             */
+            {
+              refId: new ObjectId(referralDetails._id),
+            },
+        },
+      ])
+      .exec();
+    return {
+      ...referralDetails,
+      referrals,
+    };
   }
 }

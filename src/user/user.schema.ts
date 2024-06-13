@@ -20,6 +20,9 @@ export class User {
   @Prop({ unique: true })
   email: string;
 
+  @Prop({ unique: true })
+  phoneNumber: string;
+
   @Prop({ default: false })
   isVerified: boolean;
 

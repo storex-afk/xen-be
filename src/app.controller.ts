@@ -19,7 +19,7 @@ export class AppController {
   async get() {
     const { data } = await firstValueFrom(
       this.httpService
-        .get(`https://api.flutterwave.com/v3/banks/NG`, {
+        .get(`https://countriesnow.space/api/v0.1/countries`, {
           headers: {},
         })
         .pipe(

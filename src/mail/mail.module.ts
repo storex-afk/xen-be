@@ -13,7 +13,6 @@ import { join } from 'path';
         // or
         transport: {
           host: config.get('MAIL_HOST'),
-          secure: true,
           port: config.get('MAIL_PORT'),
           auth: {
             user: config.get('MAIL_USER'),

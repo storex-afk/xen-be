@@ -10,6 +10,10 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { CommonModule } from './common/common.module';
 import { ReferralModule } from './referral/referral.module';
 import { HttpModule } from '@nestjs/axios';
+import { TransactionModule } from './transaction/transaction.module';
+import { TradeModule } from './trade/trade.module';
+import { WalletModule } from './wallet/wallet.module';
+import { PortfolioModule } from './portfolio/portfolio.module';
 
 @Module({
   imports: [
@@ -25,6 +29,10 @@ import { HttpModule } from '@nestjs/axios';
     CommonModule,
     ReferralModule,
     HttpModule,
+    TransactionModule,
+    TradeModule,
+    WalletModule,
+    PortfolioModule,
   ],
   controllers: [AppController],
   providers: [AppService],

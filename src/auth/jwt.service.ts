@@ -27,3 +27,5 @@ export class CustomJwtService {
     return isExpired;
   }
 }
+
+export { JwtService };

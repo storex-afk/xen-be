@@ -5,6 +5,9 @@ import { UserModule } from 'src/user/user.module';
 import { ReferralModule } from 'src/referral/referral.module';
 import { CustomJwtService } from './jwt.service';
 import { JwtModule } from '@nestjs/jwt';
+import { CommonModule } from 'src/common/common.module';
+import { MailModule } from 'src/mail/mail.module';
+import { WalletModule } from 'src/wallet/wallet.module';
 
 @Module({
   imports: [
@@ -15,6 +18,9 @@ import { JwtModule } from '@nestjs/jwt';
       secret: process.env.SECRET_KEY,
       signOptions: { expiresIn: '10h' },
     }),
+    CommonModule,
+    MailModule,
+    WalletModule,
   ],
   providers: [AuthService, CustomJwtService],
   controllers: [AuthController],
