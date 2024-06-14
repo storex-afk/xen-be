@@ -99,10 +99,13 @@ export class AuthService {
       throw new HttpException("User doesn't exists", HttpStatus.BAD_REQUEST);
     }
     if (await bcrypt.compare(password, user.password)) {
-      const sanitizedUser = this.userService.sanitizeUser(user);
       return {
-        user: { ...sanitizedUser },
-        token: await this.jwtService.signPayload(sanitizedUser),
+        user: { ...this.userService.sanitizeUser(user.toJSON()) },
+        token: await this.jwtService.signPayload({
+          email: user.email,
+          accountType: user.accountType,
+          _id: user && user?._id,
+        }),
       };
     } else {
       throw new HttpException('Invalid credential', HttpStatus.BAD_REQUEST);

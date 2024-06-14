@@ -13,7 +13,7 @@ import { HttpModule } from '@nestjs/axios';
 import { TransactionModule } from './transaction/transaction.module';
 import { TradeModule } from './trade/trade.module';
 import { WalletModule } from './wallet/wallet.module';
-import { PortfolioModule } from './portfolio/portfolio.module';
+import { ChallengeModule } from './challenge/challenge.module';
 
 @Module({
   imports: [
@@ -32,7 +32,7 @@ import { PortfolioModule } from './portfolio/portfolio.module';
     TransactionModule,
     TradeModule,
     WalletModule,
-    PortfolioModule,
+    ChallengeModule,
   ],
   controllers: [AppController],
   providers: [AppService],

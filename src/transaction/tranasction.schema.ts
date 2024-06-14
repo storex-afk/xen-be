@@ -19,8 +19,8 @@ export class Transaction {
   @Prop()
   type: string;
 
-  @Prop({})
-  status: string;
+  @Prop({ default: TransactionStatus.PENDING })
+  status: TransactionStatus;
 
   @Prop({})
   reason: string;
@@ -29,7 +29,7 @@ export class Transaction {
   amount: string;
 
   @Prop({ type: Types.ObjectId })
-  portfolioId: ObjectId;
+  challengeId?: ObjectId;
 
   @Prop({ type: Types.ObjectId })
   userId: ObjectId;

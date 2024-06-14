@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class PortfolioService {
+export class ChallengeService {
   constructor() {}
 
-  async createPortfolio() {}
+  async createChallenge(payload) {}
 }

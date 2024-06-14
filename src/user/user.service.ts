@@ -26,7 +26,7 @@ export class UserService {
   }
 
   async findOneByPayload(payload: BUserFindOneByPayload) {
-    return (await this.userModel.findOne(payload)).toJSON();
+    return await this.userModel.findOne(payload);
   }
 
   sanitizeUser(user) {

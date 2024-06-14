@@ -1,12 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { ObjectId, Types } from 'mongoose';
 
-export enum AccountType {
-  USER = 'USER',
-  ADMIN = 'ADMIN',
-}
-
-export enum PortfolioStatus {
+export enum ChallengeStatus {
   COMPLETED = 'COMPLETED',
   ONGOING = 'ONGOING',
   BREACHED = 'BREACHED',
@@ -15,22 +10,25 @@ export enum PortfolioStatus {
 @Schema({
   timestamps: true,
 })
-export class Portfolio {
+export class Challenge {
   @Prop()
   type: string;
 
-  @Prop({})
+  @Prop({ default: 0 })
   profit: number;
 
-  @Prop({})
+  @Prop({ default: 0 })
   loss: number;
 
-  @Prop({})
+  @Prop({ default: 0 })
   amount: number;
+
+  @Prop({ default: ChallengeStatus.PENDING })
+  status: ChallengeStatus;
 
   //   belong to a user
   @Prop({ type: Types.ObjectId })
   userId: ObjectId;
 }
 
-export const PortfolioSchema = SchemaFactory.createForClass(Portfolio);
+export const ChallengeSchema = SchemaFactory.createForClass(Challenge);
