@@ -60,4 +60,16 @@ export class MailService {
       },
     });
   }
+
+  async sendInformation(user, information) {
+    await this.mailerService.sendMail({
+      to: user.email,
+      subject: `Account ${information}`,
+      template: `./account`,
+      context: {
+        name: user.fullName,
+        information,
+      },
+    });
+  }
 }

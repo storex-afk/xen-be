@@ -16,6 +16,9 @@ export class Wallet {
 
   @Prop({ type: Types.ObjectId })
   userId: ObjectId;
+
+  @Prop({ default: false })
+  deleted: boolean;
 }
 
 export const WalletSchema = SchemaFactory.createForClass(Wallet);

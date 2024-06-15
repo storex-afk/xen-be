@@ -44,6 +44,9 @@ export class User {
   //   belong to a user
   @Prop({ type: Types.ObjectId })
   refId: ObjectId;
+
+  @Prop({ default: false })
+  blocked: boolean;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

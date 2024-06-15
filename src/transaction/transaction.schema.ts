@@ -4,6 +4,7 @@ import { ObjectId, Types } from 'mongoose';
 export enum TransactionType {
   WITHDRAWAL = 'WITHDRAWAL',
   DEPOSIT = 'DEPOSIT',
+  REF_BONUS = 'REF BONUS',
 }
 
 export enum TransactionStatus {
@@ -17,7 +18,7 @@ export enum TransactionStatus {
 })
 export class Transaction {
   @Prop()
-  type: string;
+  type: TransactionType;
 
   @Prop({ default: TransactionStatus.PENDING })
   status: TransactionStatus;

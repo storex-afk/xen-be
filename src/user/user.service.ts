@@ -29,6 +29,10 @@ export class UserService {
     return await this.userModel.findOne(payload);
   }
 
+  async deleteByPayload(payload: BUserFindOneByPayload) {
+    return await this.userModel.findOneAndDelete(payload);
+  }
+
   sanitizeUser(user) {
     const sanitized = user;
     delete sanitized['password'];

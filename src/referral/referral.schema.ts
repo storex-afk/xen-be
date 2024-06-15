@@ -10,6 +10,9 @@ export class Referral {
 
   @Prop({ type: Types.ObjectId })
   userId: ObjectId;
+
+  @Prop({ default: false })
+  deleted: boolean;
 }
 
 export const ReferralSchema = SchemaFactory.createForClass(Referral);

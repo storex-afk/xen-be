@@ -27,9 +27,7 @@ export class ReferralService {
   }
 
   async getReferralDetails(payload) {
-    const referralDetails = await (
-      await this.referralModel.findOne(payload)
-    ).toJSON();
+    const referralDetails = await this.findOneByPayload(payload);
     const referrals = await this.userModel
       .aggregate([
         {
@@ -47,5 +45,15 @@ export class ReferralService {
       ...referralDetails,
       referrals,
     };
+  }
+
+  async updateByPayload(payload, data) {
+    const update = await this.referralModel.findOneAndUpdate(payload, data, {
+      new: true,
+    });
+    return update;
+  }
+  async findOneByPayload(payload) {
+    return await this.referralModel.findOne(payload);
   }
 }

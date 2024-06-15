@@ -8,29 +8,98 @@ import {
   BadRequestException,
   InternalServerErrorException,
   UploadedFile,
+  Delete,
+  Body,
 } from '@nestjs/common';
 import { WalletService } from 'src/wallet/wallet.service';
 import { ObjectId } from 'mongodb';
 import { FileInterceptor } from '@nestjs/platform-express';
 // import { memoryStorage } from 'multer';
 import { AdminService } from './admin.service';
+import { UserService } from 'src/user/user.service';
+import { ReferralService } from 'src/referral/referral.service';
+import { MailService } from 'src/mail/mail.service';
+import { TransactionService } from 'src/transaction/transaction.service';
+import {
+  TransactionStatus,
+  TransactionType,
+} from 'src/transaction/transaction.schema';
 @Controller('admin')
 export class AdminController {
   constructor(
     private walletService: WalletService,
     private adminService: AdminService,
+    private userService: UserService,
+    private referralService: ReferralService,
+    private emailService: MailService,
+    private transactionService: TransactionService,
   ) {}
 
-  @Post('confirm-deposit/:id')
-  async confirmDeposit() {
+  @Post('confirm-transaction/:transactionId/confirm')
+  async confirmDeposit(@Param('transactionId') transactionId) {
+    const transaction = await this.transactionService.findOneByPayload({
+      _id: transactionId,
+    });
+    const user = await this.userService.findOneByPayload({
+      _id: transaction.userId,
+    });
+
+    const referral = await this.referralService.findOneByPayload({
+      _id: user.refId,
+    });
+
+    if (transaction.type === TransactionType.DEPOSIT) {
+      await this.transactionService.updateByPayload(
+        { _id: transactionId },
+        { status: TransactionStatus.SUCCESSFUL },
+      );
+      //give 5% to referred person
+      if (referral) {
+        await this.walletService.updateByPayload(
+          { userId: referral.userId },
+          { $inc: { balance: 0.05 * Number(transaction.amount) } },
+        );
+        await this.transactionService.createTransaction({
+          type: TransactionType.REF_BONUS,
+          amount: 0.05 * Number(transaction.amount),
+          status: TransactionStatus.SUCCESSFUL,
+          userId: referral.userId,
+        });
+      }
+    } else {
+      await this.transactionService.updateByPayload(
+        { _id: transactionId },
+        { status: TransactionStatus.SUCCESSFUL },
+      );
+      await this.walletService.updateByPayload(
+        { userId: user._id },
+        { $inc: { balance: -Number(transaction.amount) } },
+      );
+    }
     // send email to user about transaction it was either not confirm or confirmed
   }
+  @Post('decline-transaction/:transactionId/')
+  async declineDeposit(@Param('transactionId') transactionId) {
+    const transaction = await this.transactionService.findOneByPayload({
+      _id: transactionId,
+    });
+    const user = await this.userService.findOneByPayload({
+      _id: transaction.userId,
+    });
 
-  @Post('confirm-withdrawal/:id')
-  async confirmWithdrawal() {
-    // send email to user
+    if (transaction.type === TransactionType.DEPOSIT) {
+      await this.transactionService.updateByPayload(
+        { _id: transactionId },
+        { status: TransactionStatus.FAILED },
+      );
+    } else {
+      await this.transactionService.updateByPayload(
+        { _id: transactionId },
+        { status: TransactionStatus.FAILED },
+      );
+    }
+    // send email to user about transaction it was either not confirm or confirmed
   }
-
   @Get('users')
   async getUsers() {}
 
@@ -75,5 +144,26 @@ export class AdminController {
   @Post('create-wallet/:userId')
   async getWallet(@Param('userId') userId) {
     return await this.walletService.createWallet(new ObjectId(userId));
+  }
+
+  @Put('user/:userId/block')
+  async blockUser(@Param('userId') userId, @Body('blocked') blocked) {
+    const user = await this.userService.findOneByPayload({ _id: userId });
+    await this.emailService.sendInformation(user, 'Blocked');
+
+    return await this.userService.updateByPayload(
+      { _id: userId },
+      { blocked: !blocked },
+    );
+  }
+
+  @Delete('user/:userId/delete')
+  async deleteUser(@Param('userId') userId) {
+    const user = await this.userService.findOneByPayload({ _id: userId });
+    await this.userService.deleteByPayload({ _id: userId });
+    await this.walletService.updateByPayload({ userId }, { deleted: true });
+    await this.referralService.updateByPayload({ userId }, { deleted: true });
+    return await this.emailService.sendInformation(user, 'Deleted');
+    // send email to user
   }
 }
