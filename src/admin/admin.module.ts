@@ -8,6 +8,7 @@ import { UserModule } from 'src/user/user.module';
 import { ReferralModule } from 'src/referral/referral.module';
 import { MailModule } from 'src/mail/mail.module';
 import { TransactionModule } from 'src/transaction/transaction.module';
+import { ChallengeModule } from 'src/challenge/challenge.module';
 
 @Module({
   providers: [AdminService],
@@ -22,6 +23,7 @@ import { TransactionModule } from 'src/transaction/transaction.module';
     ReferralModule,
     MailModule,
     TransactionModule,
+    ChallengeModule
   ],
 })
 export class AdminModule {}

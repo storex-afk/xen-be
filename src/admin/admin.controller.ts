@@ -24,6 +24,8 @@ import {
   TransactionStatus,
   TransactionType,
 } from 'src/transaction/transaction.schema';
+import { ChallengeService } from 'src/challenge/challenge.service';
+import { ChallengeStatus } from 'src/challenge/challenge.schema';
 @Controller('admin')
 export class AdminController {
   constructor(
@@ -33,9 +35,10 @@ export class AdminController {
     private referralService: ReferralService,
     private emailService: MailService,
     private transactionService: TransactionService,
+    private challengeService: ChallengeService,
   ) {}
 
-  @Post('confirm-transaction/:transactionId/confirm')
+  @Get('confirm-transaction/:transactionId')
   async confirmDeposit(@Param('transactionId') transactionId) {
     const transaction = await this.transactionService.findOneByPayload({
       _id: transactionId,
@@ -52,6 +55,11 @@ export class AdminController {
       await this.transactionService.updateByPayload(
         { _id: transactionId },
         { status: TransactionStatus.SUCCESSFUL },
+      );
+      // update challenge
+      await this.challengeService.updateByPayload(
+        { _id: transaction.challengeId },
+        { status: ChallengeStatus.ONGOING },
       );
       //give 5% to referred person
       if (referral) {
@@ -76,9 +84,13 @@ export class AdminController {
         { $inc: { balance: -Number(transaction.amount) } },
       );
     }
-    // send email to user about transaction it was either not confirm or confirmed
+    // TODO:  move to bull mq
+    return await this.emailService.sendTransactionStatus(user, {
+      ...transaction,
+      status: TransactionStatus.SUCCESSFUL,
+    });
   }
-  @Post('decline-transaction/:transactionId/')
+  @Get('decline-transaction/:transactionId/')
   async declineDeposit(@Param('transactionId') transactionId) {
     const transaction = await this.transactionService.findOneByPayload({
       _id: transactionId,
@@ -98,6 +110,10 @@ export class AdminController {
         { status: TransactionStatus.FAILED },
       );
     }
+    return await this.emailService.sendTransactionStatus(user, {
+      ...transaction,
+      status: TransactionStatus.FAILED,
+    });
     // send email to user about transaction it was either not confirm or confirmed
   }
   @Get('users')

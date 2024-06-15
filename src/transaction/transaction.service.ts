@@ -1,7 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Transaction, TransactionType } from './transaction.schema';
+import {
+  Transaction,
+  TransactionStatus,
+  TransactionType,
+} from './transaction.schema';
 import { MailService } from 'src/mail/mail.service';
 
 @Injectable()
@@ -16,11 +20,13 @@ export class TransactionService {
     await transaction.save();
     if (payload.type == TransactionType.DEPOSIT) {
       // send email to admin
-      // this.mailService.send
+      await this.mailService.sendTransactionConfirm(transaction);
     } else {
       // send email to admin
       // attach user wallet
+      await this.mailService.sendTransactionConfirm(transaction);
     }
+    return transaction;
   }
 
   async updateByPayload(payload, data) {
@@ -36,5 +42,17 @@ export class TransactionService {
 
   async getAll(payload) {
     return await this.transactionModel.find(payload).exec();
+  }
+
+  async confirm(payload) {
+    const transaction = await this.findOneByPayload(payload);
+    return {
+      status:
+        transaction.status == TransactionStatus.PENDING
+          ? TransactionStatus.PENDING
+          : transaction.status == TransactionStatus.FAILED
+            ? TransactionStatus.FAILED
+            : TransactionStatus.SUCCESSFUL,
+    };
   }
 }

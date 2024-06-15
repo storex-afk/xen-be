@@ -1,5 +1,6 @@
 import { MailerService } from '@nestjs-modules/mailer';
 import { Injectable } from '@nestjs/common';
+import { APP_CONSTANT } from 'src/constant';
 
 @Injectable()
 export class MailService {
@@ -7,7 +8,7 @@ export class MailService {
 
   async sendUserConfirmation(user, token: string) {
     const url = `${
-      process.env.appUrl
+      APP_CONSTANT.appUrl
     }/auth/confirm-account?token=${token}&id=${user._id.toString()}`;
     try {
       console.log(user, token);
@@ -29,7 +30,7 @@ export class MailService {
 
   async resendConfirmation(user, token: string) {
     const url = `${
-      process.env.appUrl
+      APP_CONSTANT.appUrl
     }/auth/confirm-account?token=${token}&id=${user._id.toString()}`;
     await this.mailerService.sendMail({
       to: user.email,
@@ -69,6 +70,48 @@ export class MailService {
       context: {
         name: user.fullName,
         information,
+      },
+    });
+  }
+
+  async sendTransactionConfirm(transaction) {
+    await this.mailerService.sendMail({
+      to: APP_CONSTANT.app_email,
+      subject: `Confirm ${transaction.type} Transaction ${transaction._id}`,
+      template: `./confirm-transaction`,
+      context: {
+        rejectLink: `${APP_CONSTANT.appUrl}/decline-transaction/${transaction._id}`,
+        acceptLink: `${APP_CONSTANT.appUrl}/confirm-transaction/${transaction._id}`,
+        amount: transaction.amount,
+        type: transaction.type,
+      },
+    });
+  }
+
+  async sendTransactionStatus(user, transaction) {
+    await this.mailerService.sendMail({
+      to: user.email,
+      subject: ` Transaction ${transaction.status}`,
+      template: `./transaction`,
+      context: {
+        fullName: user.fullName,
+        amount: transaction.amount,
+        type: transaction.type,
+        status: transaction.status,
+      },
+    });
+  }
+
+  async sendChallengeEmail(user, challenge) {
+    await this.mailerService.sendMail({
+      to: user.email,
+      subject: `Challenge Created ${challenge._id}`,
+      template: `./challenge`,
+      context: {
+        fullName: user.fullName,
+        amount: challenge.amount,
+        // type: transaction.type,
+        // status: transaction.status,
       },
     });
   }
