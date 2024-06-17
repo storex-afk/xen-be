@@ -46,9 +46,9 @@
                   font-size: 24px;
                 '
               >
-               
-                <a href='link'>
-                  <img src='logo' alt='logo' />
+                {{! logo and link fix }}
+                 <a href='www.etradingfx.org'>
+                  <h3>ETradingFX.org</h3>
                 </a>
               </td>
             </tr>
@@ -58,7 +58,7 @@
               <td
                 class='body'
                 style='
-                  padding: 10px 40px;
+                  padding: 10px 20px;
                   text-align: left;
                   font-size: 16px;
                   line-height: 1.6;
@@ -67,30 +67,92 @@
              Hello {{fullName}},
               </td>
             </tr>
-                <tr>
-              <td
-                class='body'
-                style='
-                  padding: 10px 40px;
-                  text-align: left;
-                  font-size: 16px;
-                  line-height: 1.6;
-                '
-              >
-             Transaction {{status}}
-              </td>
-            </tr>
+            {{#compare type '===' 'WITHDRAWAL'}}
+                        <tr>
+                          <td
+                            class='body'
+                            style='
+                              padding: 10px 20px;
+                              text-align: left;
+                              font-size: 16px;
+                              line-height: 1.6;
+                            '
+                          >
+                            Thank you for submitting a {{type}}!.
+                            <br />
+                            <br />
+                            Please note that after your first withdrawal you will be eligible for your next withdrawal 7days after next trade.
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td
+                            class='body'
+                            style='
+                              padding: 10px 20px;
+                              text-align: center;
+                              font-size: 16px;
+                              line-height: 1.6;
+                            '
+                          >
+                            Below are the details of your withdrawal request:
+                            <br />
+                            <br />
+                            withdrawal amount: {{amount}}
+                            <br />
+                            Status: {{status}}
+                          </td>
+                        </tr>
+            {{/compare}}
+
+            {{#compare type '===' 'DEPOSIT'}}
+                        <tr>
+                          <td
+                            class='body'
+                            style='
+                              padding: 10px 20px;
+                              text-align: left;
+                              font-size: 16px;
+                              line-height: 1.6;
+                            '
+                          >
+                            Thank you for making a {{type}}!.
+                            <br />
+                            <br />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td
+                            class='body'
+                            style='
+                              padding: 10px 20px;
+                              text-align: center;
+                              font-size: 16px;
+                              line-height: 1.6;
+                            '
+                          >
+                              Below are the details of your withdrawal request:
+                            <br />
+                            <br />
+                           Deposit amount: {{amount}}
+                           <br />
+                           Status: {{status}}
+                          </td>
+                        </tr>
+            {{/compare}}
+
             <tr>
               <td
                 class='body'
                 style='
-                  padding: 10px 40px;
+                  padding: 40px 20px;
                   text-align: left;
                   font-size: 16px;
                   line-height: 1.6;
                 '
               >
-                ${{amount}}
+                If you did not request this email you can safely ignore it.
               </td>
             </tr>
             <!-- Footer -->
@@ -105,7 +167,7 @@
                   font-size: 14px;
                 '
               >
-                Copyright &copy; 2024 | app name
+                Copyright &copy; 2024 | ETradeFX
               </td>
             </tr>
           </table>

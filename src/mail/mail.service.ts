@@ -47,7 +47,7 @@ export class MailService {
 
   async sendForgotConfirmation(user, token: string) {
     const url = `${
-      process.env.appUrl
+      APP_CONSTANT.appUrl
     }/auth/reset-password?token=${token}&id=${user._id.toString()}`;
     await this.mailerService.sendMail({
       to: user.email,
@@ -74,7 +74,14 @@ export class MailService {
     });
   }
 
-  async sendTransactionConfirm(transaction) {
+  async sendTransactionConfirm(
+    transaction,
+    wallet?: {
+      balance: number;
+      btcDetails: Record<string, any>;
+      ethDetails: Record<string, any>;
+    },
+  ) {
     await this.mailerService.sendMail({
       to: APP_CONSTANT.app_email,
       subject: `Confirm ${transaction.type} Transaction ${transaction._id}`,
@@ -82,8 +89,12 @@ export class MailService {
       context: {
         rejectLink: `${APP_CONSTANT.appUrl}/decline-transaction/${transaction._id}`,
         acceptLink: `${APP_CONSTANT.appUrl}/confirm-transaction/${transaction._id}`,
-        amount: transaction.amount,
+        amount: this.formatMoney(transaction.amount),
         type: transaction.type,
+        btcAddress: wallet?.btcDetails?.address,
+        btcNetwork: wallet?.btcDetails?.network,
+        ethNetwork: wallet?.ethDetails?.network,
+        ethAddress: wallet?.ethDetails?.address,
       },
     });
   }
@@ -91,11 +102,11 @@ export class MailService {
   async sendTransactionStatus(user, transaction) {
     await this.mailerService.sendMail({
       to: user.email,
-      subject: ` Transaction ${transaction.status}`,
+      subject: ` ${transaction.type} Transaction ${transaction.status}`,
       template: `./transaction`,
       context: {
         fullName: user.fullName,
-        amount: transaction.amount,
+        amount: this.formatMoney(transaction.amount),
         type: transaction.type,
         status: transaction.status,
       },
@@ -109,10 +120,33 @@ export class MailService {
       template: `./challenge`,
       context: {
         fullName: user.fullName,
-        amount: challenge.amount,
+        amount: this.formatMoney(challenge.amount),
         // type: transaction.type,
         // status: transaction.status,
       },
     });
+  }
+
+  async sendReferralMail(user, data) {
+    await this.mailerService.sendMail({
+      to: user.email,
+      subject: `Referral Bonus Added to your wallet`,
+      template: `./referral`,
+      context: {
+        fullName: user.fullName,
+        amount: this.formatMoney(data.amount),
+        // type: transaction.type,
+        // status: transaction.status,
+      },
+    });
+  }
+
+  formatMoney(amount: number) {
+    const formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    });
+    return formatter.format(amount);
   }
 }

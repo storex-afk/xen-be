@@ -9,7 +9,7 @@ export enum TradeType {
 @Schema({
   timestamps: true,
 })
-export class Transaction {
+export class Trade {
   @Prop()
   side: string;
 
@@ -37,4 +37,4 @@ export class Transaction {
   profitOrLoss: string;
 }
 
-export const TransactionSchema = SchemaFactory.createForClass(Transaction);
+export const TradeSchema = SchemaFactory.createForClass(Trade);

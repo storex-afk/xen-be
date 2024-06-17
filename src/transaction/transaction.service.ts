@@ -15,16 +15,16 @@ export class TransactionService {
     private mailService: MailService,
   ) {}
 
-  async createTransaction(payload) {
+  async createTransaction(payload, wallet?: any) {
     const transaction = new this.transactionModel(payload);
     await transaction.save();
     if (payload.type == TransactionType.DEPOSIT) {
       // send email to admin
       await this.mailService.sendTransactionConfirm(transaction);
+    } else if (payload.type === TransactionType.WITHDRAWAL) {
+      await this.mailService.sendTransactionConfirm(transaction, wallet);
     } else {
-      // send email to admin
-      // attach user wallet
-      await this.mailService.sendTransactionConfirm(transaction);
+      // default could be referral
     }
     return transaction;
   }

@@ -9,6 +9,7 @@ import { ReferralModule } from 'src/referral/referral.module';
 import { MailModule } from 'src/mail/mail.module';
 import { TransactionModule } from 'src/transaction/transaction.module';
 import { ChallengeModule } from 'src/challenge/challenge.module';
+import { TradeModule } from 'src/trade/trade.module';
 
 @Module({
   providers: [AdminService],
@@ -23,7 +24,8 @@ import { ChallengeModule } from 'src/challenge/challenge.module';
     ReferralModule,
     MailModule,
     TransactionModule,
-    ChallengeModule
+    ChallengeModule,
+    TradeModule,
   ],
 })
 export class AdminModule {}

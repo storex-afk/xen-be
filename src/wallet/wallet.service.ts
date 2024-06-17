@@ -5,7 +5,7 @@ import { Wallet } from './wallet.schema';
 
 export interface BWalletFindOneByPayload {
   _id?: Types.ObjectId | string;
-  userId?: Types.ObjectId | string;
+  userId?: any;
 }
 
 @Injectable()
@@ -37,6 +37,6 @@ export class WalletService {
   }
 
   async findOneByPayload(payload: BWalletFindOneByPayload) {
-    return (await this.walletModel.findOne(payload)).toJSON();
+    return await this.walletModel.findOne(payload).exec();
   }
 }
