@@ -79,6 +79,8 @@ export class AuthService {
           userId: createdUser._id,
         });
       }
+
+      await this.walletService.createWallet(createdUser._id);
       const token = this.otpService.generateOTP(6);
       await this.cacheService.set(
         `verification:${createdUser._id}`,
@@ -179,7 +181,11 @@ export class AuthService {
     }
   }
 
-  async resendOtp(payload) {
-    console.log(payload);
+  async resendConfirmationEmail(payload) {
+    const user = await this.userService.findOneByPayload(payload);
+    const token = this.otpService.generateOTP(6);
+    await this.cacheService.set(`verification:${user._id}`, token, 300);
+    await this.mailService.sendUserConfirmation(user, token);
+    return { message: 'Token Sent' };
   }
 }
