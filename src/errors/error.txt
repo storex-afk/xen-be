@@ -49687,3 +49687,903 @@ Potential solutions:
 2024-06-17T12:51:16.518Z: 📢 TradeController {/api/trade}:
 2024-06-17T12:51:16.518Z: 📢 Mapped {/api/trade/:challengeId, GET} route
 2024-06-17T12:51:16.522Z: 📢 Nest application successfully started
+2024-06-17T18:31:15.078Z: 📢 Starting Nest application...
+2024-06-17T18:31:15.099Z: 📢 CommonModule dependencies initialized
+2024-06-17T18:31:15.099Z: 📢 MailerModule dependencies initialized
+2024-06-17T18:31:15.099Z: 📢 CsvModule dependencies initialized
+2024-06-17T18:31:15.099Z: 📢 MulterModule dependencies initialized
+2024-06-17T18:31:15.099Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:31:15.099Z: 📢 JwtModule dependencies initialized
+2024-06-17T18:31:15.099Z: 📢 HttpModule dependencies initialized
+2024-06-17T18:31:15.100Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T18:31:15.100Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:31:15.100Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:31:15.102Z: 📢 AppModule dependencies initialized
+2024-06-17T18:31:15.309Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T18:31:15.309Z: 📢 MailModule dependencies initialized
+2024-06-17T18:31:15.335Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T18:31:15.340Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:31:15.340Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:31:15.340Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:31:15.340Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:31:15.340Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:31:15.340Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:31:15.341Z: 📢 TradeModule dependencies initialized
+2024-06-17T18:31:15.341Z: 📢 ReferralModule dependencies initialized
+2024-06-17T18:31:15.341Z: 📢 TransactionModule dependencies initialized
+2024-06-17T18:31:15.341Z: 📢 WalletModule dependencies initialized
+2024-06-17T18:31:15.341Z: 📢 UserModule dependencies initialized
+2024-06-17T18:31:15.341Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T18:31:15.341Z: 📢 AdminModule dependencies initialized
+2024-06-17T18:31:15.730Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:31:15.730Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:31:15.730Z: 📢 AuthModule dependencies initialized
+2024-06-17T18:31:15.734Z: 📢 AppController {/api}:
+2024-06-17T18:31:15.736Z: 📢 Mapped {/api, GET} route
+2024-06-17T18:31:15.737Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T18:31:15.737Z: 📢 AuthController {/api/auth}:
+2024-06-17T18:31:15.737Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T18:31:15.737Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T18:31:15.737Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T18:31:15.738Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T18:31:15.738Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T18:31:15.738Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T18:31:15.738Z: 📢 UserController {/api/user}:
+2024-06-17T18:31:15.738Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T18:31:15.739Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T18:31:15.739Z: 📢 ReferralController {/api/referral}:
+2024-06-17T18:31:15.739Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T18:31:15.739Z: 📢 WalletController {/api/wallet}:
+2024-06-17T18:31:15.739Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T18:31:15.739Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T18:31:15.739Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T18:31:15.740Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T18:31:15.740Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T18:31:15.740Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T18:31:15.740Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T18:31:15.740Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T18:31:15.740Z: 📢 AdminController {/api/admin}:
+2024-06-17T18:31:15.740Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T18:31:15.740Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T18:31:15.741Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T18:31:15.741Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T18:31:15.742Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T18:31:15.742Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T18:31:15.742Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T18:31:15.742Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T18:31:15.742Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T18:31:15.743Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T18:31:15.743Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T18:31:15.743Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T18:31:15.743Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T18:31:15.743Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T18:31:15.743Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T18:31:15.743Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T18:31:15.743Z: 📢 TradeController {/api/trade}:
+2024-06-17T18:31:15.743Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T18:31:15.746Z: 📢 Nest application successfully started
+2024-06-17T18:36:14.404Z: 📢 Starting Nest application...
+2024-06-17T18:36:14.427Z: 📢 CommonModule dependencies initialized
+2024-06-17T18:36:14.428Z: 📢 MailerModule dependencies initialized
+2024-06-17T18:36:14.428Z: 📢 CsvModule dependencies initialized
+2024-06-17T18:36:14.428Z: 📢 MulterModule dependencies initialized
+2024-06-17T18:36:14.428Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:36:14.428Z: 📢 JwtModule dependencies initialized
+2024-06-17T18:36:14.428Z: 📢 HttpModule dependencies initialized
+2024-06-17T18:36:14.428Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T18:36:14.429Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:36:14.429Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:36:14.431Z: 📢 AppModule dependencies initialized
+2024-06-17T18:36:14.618Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T18:36:14.619Z: 📢 MailModule dependencies initialized
+2024-06-17T18:36:14.656Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T18:36:14.661Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:36:14.661Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:36:14.661Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:36:14.661Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:36:14.661Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:36:14.661Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:36:14.662Z: 📢 TradeModule dependencies initialized
+2024-06-17T18:36:14.662Z: 📢 ReferralModule dependencies initialized
+2024-06-17T18:36:14.662Z: 📢 TransactionModule dependencies initialized
+2024-06-17T18:36:14.662Z: 📢 WalletModule dependencies initialized
+2024-06-17T18:36:14.662Z: 📢 UserModule dependencies initialized
+2024-06-17T18:36:14.663Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T18:36:14.663Z: 📢 AdminModule dependencies initialized
+2024-06-17T18:36:15.798Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:36:15.798Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:36:15.799Z: 📢 AuthModule dependencies initialized
+2024-06-17T18:36:15.803Z: 📢 AppController {/api}:
+2024-06-17T18:36:15.805Z: 📢 Mapped {/api, GET} route
+2024-06-17T18:36:15.806Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T18:36:15.807Z: 📢 AuthController {/api/auth}:
+2024-06-17T18:36:15.807Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T18:36:15.808Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T18:36:15.809Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T18:36:15.809Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T18:36:15.809Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T18:36:15.810Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T18:36:15.810Z: 📢 UserController {/api/user}:
+2024-06-17T18:36:15.811Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T18:36:15.812Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T18:36:15.812Z: 📢 ReferralController {/api/referral}:
+2024-06-17T18:36:15.812Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T18:36:15.812Z: 📢 WalletController {/api/wallet}:
+2024-06-17T18:36:15.813Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T18:36:15.813Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T18:36:15.813Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T18:36:15.813Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T18:36:15.813Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T18:36:15.813Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T18:36:15.814Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T18:36:15.814Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T18:36:15.814Z: 📢 AdminController {/api/admin}:
+2024-06-17T18:36:15.814Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T18:36:15.814Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T18:36:15.815Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T18:36:15.815Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T18:36:15.815Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T18:36:15.815Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T18:36:15.815Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T18:36:15.815Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T18:36:15.815Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T18:36:15.816Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T18:36:15.816Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T18:36:15.816Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T18:36:15.816Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T18:36:15.816Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T18:36:15.816Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T18:36:15.817Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T18:36:15.817Z: 📢 TradeController {/api/trade}:
+2024-06-17T18:36:15.817Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T18:36:15.821Z: 📢 Nest application successfully started
+2024-06-17T18:46:03.652Z: 📢 Starting Nest application...
+2024-06-17T18:46:03.674Z: 📢 CommonModule dependencies initialized
+2024-06-17T18:46:03.674Z: 📢 MailerModule dependencies initialized
+2024-06-17T18:46:03.674Z: 📢 CsvModule dependencies initialized
+2024-06-17T18:46:03.674Z: 📢 MulterModule dependencies initialized
+2024-06-17T18:46:03.674Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:46:03.674Z: 📢 JwtModule dependencies initialized
+2024-06-17T18:46:03.674Z: 📢 HttpModule dependencies initialized
+2024-06-17T18:46:03.675Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T18:46:03.675Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:46:03.675Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:46:03.677Z: 📢 AppModule dependencies initialized
+2024-06-17T18:46:03.882Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T18:46:03.882Z: 📢 MailModule dependencies initialized
+2024-06-17T18:46:03.898Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T18:46:03.903Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:46:03.903Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:46:03.903Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:46:03.904Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:46:03.904Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:46:03.904Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:46:03.905Z: 📢 TradeModule dependencies initialized
+2024-06-17T18:46:03.905Z: 📢 ReferralModule dependencies initialized
+2024-06-17T18:46:03.905Z: 📢 TransactionModule dependencies initialized
+2024-06-17T18:46:03.905Z: 📢 WalletModule dependencies initialized
+2024-06-17T18:46:03.905Z: 📢 UserModule dependencies initialized
+2024-06-17T18:46:03.906Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T18:46:03.906Z: 📢 AdminModule dependencies initialized
+2024-06-17T18:46:06.101Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:46:06.101Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:46:06.101Z: 📢 AuthModule dependencies initialized
+2024-06-17T18:46:06.106Z: 📢 AppController {/api}:
+2024-06-17T18:46:06.109Z: 📢 Mapped {/api, GET} route
+2024-06-17T18:46:06.109Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T18:46:06.109Z: 📢 AuthController {/api/auth}:
+2024-06-17T18:46:06.110Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T18:46:06.110Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T18:46:06.111Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T18:46:06.111Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T18:46:06.111Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T18:46:06.112Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T18:46:06.112Z: 📢 UserController {/api/user}:
+2024-06-17T18:46:06.113Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T18:46:06.113Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T18:46:06.113Z: 📢 ReferralController {/api/referral}:
+2024-06-17T18:46:06.114Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T18:46:06.114Z: 📢 WalletController {/api/wallet}:
+2024-06-17T18:46:06.115Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T18:46:06.115Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T18:46:06.115Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T18:46:06.115Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T18:46:06.116Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T18:46:06.116Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T18:46:06.116Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T18:46:06.116Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T18:46:06.116Z: 📢 AdminController {/api/admin}:
+2024-06-17T18:46:06.117Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T18:46:06.117Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T18:46:06.117Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T18:46:06.117Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T18:46:06.117Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T18:46:06.117Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T18:46:06.118Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T18:46:06.118Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T18:46:06.118Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T18:46:06.118Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T18:46:06.119Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T18:46:06.119Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T18:46:06.119Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T18:46:06.119Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T18:46:06.120Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T18:46:06.120Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T18:46:06.120Z: 📢 TradeController {/api/trade}:
+2024-06-17T18:46:06.120Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T18:46:06.123Z: 📢 Nest application successfully started
+2024-06-17T18:51:51.517Z: 📢 Starting Nest application...
+2024-06-17T18:51:51.539Z: 📢 CommonModule dependencies initialized
+2024-06-17T18:51:51.539Z: 📢 MailerModule dependencies initialized
+2024-06-17T18:51:51.539Z: 📢 CsvModule dependencies initialized
+2024-06-17T18:51:51.539Z: 📢 MulterModule dependencies initialized
+2024-06-17T18:51:51.540Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:51:51.540Z: 📢 JwtModule dependencies initialized
+2024-06-17T18:51:51.540Z: 📢 HttpModule dependencies initialized
+2024-06-17T18:51:51.540Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T18:51:51.540Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:51:51.540Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:51:51.542Z: 📢 AppModule dependencies initialized
+2024-06-17T18:51:51.727Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T18:51:51.727Z: 📢 MailModule dependencies initialized
+2024-06-17T18:51:51.765Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T18:51:51.769Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:51:51.769Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:51:51.769Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:51:51.769Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:51:51.769Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:51:51.769Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:51:51.769Z: 📢 TradeModule dependencies initialized
+2024-06-17T18:51:51.769Z: 📢 ReferralModule dependencies initialized
+2024-06-17T18:51:51.770Z: 📢 TransactionModule dependencies initialized
+2024-06-17T18:51:51.770Z: 📢 WalletModule dependencies initialized
+2024-06-17T18:51:51.770Z: 📢 UserModule dependencies initialized
+2024-06-17T18:51:51.770Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T18:51:51.771Z: 📢 AdminModule dependencies initialized
+2024-06-17T18:51:52.976Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:51:52.976Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:51:52.976Z: 📢 AuthModule dependencies initialized
+2024-06-17T18:51:52.979Z: 📢 AppController {/api}:
+2024-06-17T18:51:52.980Z: 📢 Mapped {/api, GET} route
+2024-06-17T18:51:52.981Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T18:51:52.981Z: 📢 AuthController {/api/auth}:
+2024-06-17T18:51:52.981Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T18:51:52.982Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T18:51:52.982Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T18:51:52.982Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T18:51:52.983Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T18:51:52.983Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T18:51:52.983Z: 📢 UserController {/api/user}:
+2024-06-17T18:51:52.983Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T18:51:52.984Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T18:51:52.984Z: 📢 ReferralController {/api/referral}:
+2024-06-17T18:51:52.984Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T18:51:52.984Z: 📢 WalletController {/api/wallet}:
+2024-06-17T18:51:52.984Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T18:51:52.984Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T18:51:52.984Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T18:51:52.985Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T18:51:52.985Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T18:51:52.985Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T18:51:52.985Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T18:51:52.985Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T18:51:52.985Z: 📢 AdminController {/api/admin}:
+2024-06-17T18:51:52.985Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T18:51:52.986Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T18:51:52.986Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T18:51:52.986Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T18:51:52.986Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T18:51:52.987Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T18:51:52.987Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T18:51:52.987Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T18:51:52.987Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T18:51:52.988Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T18:51:52.988Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T18:51:52.989Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T18:51:52.989Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T18:51:52.989Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T18:51:52.989Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T18:51:52.989Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T18:51:52.989Z: 📢 TradeController {/api/trade}:
+2024-06-17T18:51:52.989Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T18:51:52.991Z: 📢 Nest application successfully started
+2024-06-17T18:54:37.120Z: 📢 Starting Nest application...
+2024-06-17T18:54:37.144Z: 📢 CommonModule dependencies initialized
+2024-06-17T18:54:37.145Z: 📢 MailerModule dependencies initialized
+2024-06-17T18:54:37.145Z: 📢 CsvModule dependencies initialized
+2024-06-17T18:54:37.145Z: 📢 MulterModule dependencies initialized
+2024-06-17T18:54:37.145Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:54:37.145Z: 📢 JwtModule dependencies initialized
+2024-06-17T18:54:37.145Z: 📢 HttpModule dependencies initialized
+2024-06-17T18:54:37.146Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T18:54:37.146Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:54:37.146Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:54:37.148Z: 📢 AppModule dependencies initialized
+2024-06-17T18:54:37.340Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T18:54:37.340Z: 📢 MailModule dependencies initialized
+2024-06-17T18:54:37.345Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T18:54:37.349Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:54:37.350Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:54:37.350Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:54:37.350Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:54:37.350Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:54:37.350Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:54:37.350Z: 📢 TradeModule dependencies initialized
+2024-06-17T18:54:37.350Z: 📢 ReferralModule dependencies initialized
+2024-06-17T18:54:37.350Z: 📢 TransactionModule dependencies initialized
+2024-06-17T18:54:37.351Z: 📢 WalletModule dependencies initialized
+2024-06-17T18:54:37.351Z: 📢 UserModule dependencies initialized
+2024-06-17T18:54:37.351Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T18:54:37.351Z: 📢 AdminModule dependencies initialized
+2024-06-17T18:54:38.290Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:54:38.290Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:54:38.290Z: 📢 AuthModule dependencies initialized
+2024-06-17T18:54:38.296Z: 📢 AppController {/api}:
+2024-06-17T18:54:38.299Z: 📢 Mapped {/api, GET} route
+2024-06-17T18:54:38.300Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T18:54:38.300Z: 📢 AuthController {/api/auth}:
+2024-06-17T18:54:38.300Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T18:54:38.301Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T18:54:38.302Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T18:54:38.302Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T18:54:38.302Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T18:54:38.303Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T18:54:38.303Z: 📢 UserController {/api/user}:
+2024-06-17T18:54:38.305Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T18:54:38.306Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T18:54:38.306Z: 📢 ReferralController {/api/referral}:
+2024-06-17T18:54:38.307Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T18:54:38.307Z: 📢 WalletController {/api/wallet}:
+2024-06-17T18:54:38.307Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T18:54:38.307Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T18:54:38.307Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T18:54:38.308Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T18:54:38.308Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T18:54:38.308Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T18:54:38.308Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T18:54:38.308Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T18:54:38.308Z: 📢 AdminController {/api/admin}:
+2024-06-17T18:54:38.309Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T18:54:38.309Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T18:54:38.309Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T18:54:38.309Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T18:54:38.309Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T18:54:38.309Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T18:54:38.309Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T18:54:38.310Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T18:54:38.310Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T18:54:38.310Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T18:54:38.311Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T18:54:38.311Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T18:54:38.311Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T18:54:38.311Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T18:54:38.311Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T18:54:38.311Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T18:54:38.311Z: 📢 TradeController {/api/trade}:
+2024-06-17T18:54:38.312Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T18:54:38.315Z: 📢 Nest application successfully started
+2024-06-17T18:56:37.461Z: 📢 Starting Nest application...
+2024-06-17T18:56:37.484Z: 📢 CommonModule dependencies initialized
+2024-06-17T18:56:37.484Z: 📢 MailerModule dependencies initialized
+2024-06-17T18:56:37.484Z: 📢 CsvModule dependencies initialized
+2024-06-17T18:56:37.484Z: 📢 MulterModule dependencies initialized
+2024-06-17T18:56:37.484Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:56:37.484Z: 📢 JwtModule dependencies initialized
+2024-06-17T18:56:37.484Z: 📢 HttpModule dependencies initialized
+2024-06-17T18:56:37.485Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T18:56:37.485Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:56:37.485Z: 📢 ConfigModule dependencies initialized
+2024-06-17T18:56:37.487Z: 📢 AppModule dependencies initialized
+2024-06-17T18:56:37.665Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T18:56:37.665Z: 📢 MailModule dependencies initialized
+2024-06-17T18:56:37.675Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T18:56:37.680Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:56:37.680Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:56:37.680Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:56:37.680Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:56:37.680Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:56:37.681Z: 📢 MongooseModule dependencies initialized
+2024-06-17T18:56:37.681Z: 📢 TradeModule dependencies initialized
+2024-06-17T18:56:37.681Z: 📢 ReferralModule dependencies initialized
+2024-06-17T18:56:37.681Z: 📢 TransactionModule dependencies initialized
+2024-06-17T18:56:37.681Z: 📢 WalletModule dependencies initialized
+2024-06-17T18:56:37.681Z: 📢 UserModule dependencies initialized
+2024-06-17T18:56:37.682Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T18:56:37.682Z: 📢 AdminModule dependencies initialized
+2024-06-17T18:56:40.317Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:56:40.318Z: 📢 CacheModule dependencies initialized
+2024-06-17T18:56:40.318Z: 📢 AuthModule dependencies initialized
+2024-06-17T18:56:40.323Z: 📢 AppController {/api}:
+2024-06-17T18:56:40.326Z: 📢 Mapped {/api, GET} route
+2024-06-17T18:56:40.326Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T18:56:40.326Z: 📢 AuthController {/api/auth}:
+2024-06-17T18:56:40.327Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T18:56:40.327Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T18:56:40.328Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T18:56:40.328Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T18:56:40.328Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T18:56:40.329Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T18:56:40.329Z: 📢 UserController {/api/user}:
+2024-06-17T18:56:40.330Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T18:56:40.330Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T18:56:40.330Z: 📢 ReferralController {/api/referral}:
+2024-06-17T18:56:40.331Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T18:56:40.331Z: 📢 WalletController {/api/wallet}:
+2024-06-17T18:56:40.331Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T18:56:40.331Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T18:56:40.331Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T18:56:40.332Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T18:56:40.332Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T18:56:40.332Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T18:56:40.332Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T18:56:40.333Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T18:56:40.333Z: 📢 AdminController {/api/admin}:
+2024-06-17T18:56:40.333Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T18:56:40.334Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T18:56:40.334Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T18:56:40.334Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T18:56:40.335Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T18:56:40.335Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T18:56:40.335Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T18:56:40.335Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T18:56:40.336Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T18:56:40.336Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T18:56:40.337Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T18:56:40.337Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T18:56:40.337Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T18:56:40.337Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T18:56:40.337Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T18:56:40.338Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T18:56:40.338Z: 📢 TradeController {/api/trade}:
+2024-06-17T18:56:40.338Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T18:56:40.342Z: 📢 Nest application successfully started
+2024-06-17T19:01:17.238Z: 📢 Starting Nest application...
+2024-06-17T19:01:17.258Z: 📢 CommonModule dependencies initialized
+2024-06-17T19:01:17.259Z: 📢 MailerModule dependencies initialized
+2024-06-17T19:01:17.259Z: 📢 CsvModule dependencies initialized
+2024-06-17T19:01:17.259Z: 📢 MulterModule dependencies initialized
+2024-06-17T19:01:17.259Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:01:17.259Z: 📢 JwtModule dependencies initialized
+2024-06-17T19:01:17.259Z: 📢 HttpModule dependencies initialized
+2024-06-17T19:01:17.259Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T19:01:17.260Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:01:17.260Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:01:17.262Z: 📢 AppModule dependencies initialized
+2024-06-17T19:01:17.437Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T19:01:17.437Z: 📢 MailModule dependencies initialized
+2024-06-17T19:01:17.443Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T19:01:17.447Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:01:17.447Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:01:17.447Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:01:17.447Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:01:17.447Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:01:17.447Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:01:17.448Z: 📢 TradeModule dependencies initialized
+2024-06-17T19:01:17.448Z: 📢 ReferralModule dependencies initialized
+2024-06-17T19:01:17.448Z: 📢 TransactionModule dependencies initialized
+2024-06-17T19:01:17.448Z: 📢 WalletModule dependencies initialized
+2024-06-17T19:01:17.448Z: 📢 UserModule dependencies initialized
+2024-06-17T19:01:17.448Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T19:01:17.449Z: 📢 AdminModule dependencies initialized
+2024-06-17T19:01:17.883Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:01:17.883Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:01:17.883Z: 📢 AuthModule dependencies initialized
+2024-06-17T19:01:17.888Z: 📢 AppController {/api}:
+2024-06-17T19:01:17.891Z: 📢 Mapped {/api, GET} route
+2024-06-17T19:01:17.891Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T19:01:17.892Z: 📢 AuthController {/api/auth}:
+2024-06-17T19:01:17.892Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T19:01:17.893Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T19:01:17.893Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T19:01:17.893Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T19:01:17.893Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T19:01:17.894Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T19:01:17.894Z: 📢 UserController {/api/user}:
+2024-06-17T19:01:17.895Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T19:01:17.895Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T19:01:17.895Z: 📢 ReferralController {/api/referral}:
+2024-06-17T19:01:17.896Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T19:01:17.896Z: 📢 WalletController {/api/wallet}:
+2024-06-17T19:01:17.896Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T19:01:17.896Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T19:01:17.896Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T19:01:17.897Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T19:01:17.897Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T19:01:17.897Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T19:01:17.897Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T19:01:17.897Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T19:01:17.897Z: 📢 AdminController {/api/admin}:
+2024-06-17T19:01:17.898Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T19:01:17.898Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T19:01:17.898Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T19:01:17.898Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T19:01:17.898Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T19:01:17.898Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T19:01:17.898Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T19:01:17.899Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T19:01:17.899Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T19:01:17.899Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T19:01:17.899Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T19:01:17.899Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T19:01:17.899Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T19:01:17.900Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T19:01:17.900Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T19:01:17.900Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T19:01:17.900Z: 📢 TradeController {/api/trade}:
+2024-06-17T19:01:17.900Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T19:01:17.904Z: 📢 Nest application successfully started
+2024-06-17T19:05:58.337Z: 📢 Starting Nest application...
+2024-06-17T19:05:58.358Z: 📢 CommonModule dependencies initialized
+2024-06-17T19:05:58.358Z: 📢 MailerModule dependencies initialized
+2024-06-17T19:05:58.358Z: 📢 CsvModule dependencies initialized
+2024-06-17T19:05:58.358Z: 📢 MulterModule dependencies initialized
+2024-06-17T19:05:58.358Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:05:58.359Z: 📢 JwtModule dependencies initialized
+2024-06-17T19:05:58.359Z: 📢 HttpModule dependencies initialized
+2024-06-17T19:05:58.359Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T19:05:58.359Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:05:58.359Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:05:58.361Z: 📢 AppModule dependencies initialized
+2024-06-17T19:05:58.552Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T19:05:58.553Z: 📢 MailModule dependencies initialized
+2024-06-17T19:05:58.558Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T19:05:58.562Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:05:58.562Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:05:58.562Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:05:58.562Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:05:58.562Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:05:58.562Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:05:58.563Z: 📢 TradeModule dependencies initialized
+2024-06-17T19:05:58.563Z: 📢 ReferralModule dependencies initialized
+2024-06-17T19:05:58.563Z: 📢 TransactionModule dependencies initialized
+2024-06-17T19:05:58.563Z: 📢 WalletModule dependencies initialized
+2024-06-17T19:05:58.563Z: 📢 UserModule dependencies initialized
+2024-06-17T19:05:58.564Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T19:05:58.564Z: 📢 AdminModule dependencies initialized
+2024-06-17T19:06:01.192Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:06:01.193Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:06:01.193Z: 📢 AuthModule dependencies initialized
+2024-06-17T19:06:01.199Z: 📢 AppController {/api}:
+2024-06-17T19:06:01.202Z: 📢 Mapped {/api, GET} route
+2024-06-17T19:06:01.203Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T19:06:01.203Z: 📢 AuthController {/api/auth}:
+2024-06-17T19:06:01.204Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T19:06:01.204Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T19:06:01.205Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T19:06:01.205Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T19:06:01.206Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T19:06:01.206Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T19:06:01.206Z: 📢 UserController {/api/user}:
+2024-06-17T19:06:01.207Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T19:06:01.208Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T19:06:01.208Z: 📢 ReferralController {/api/referral}:
+2024-06-17T19:06:01.208Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T19:06:01.208Z: 📢 WalletController {/api/wallet}:
+2024-06-17T19:06:01.209Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T19:06:01.209Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T19:06:01.209Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T19:06:01.209Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T19:06:01.209Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T19:06:01.209Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T19:06:01.209Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T19:06:01.210Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T19:06:01.210Z: 📢 AdminController {/api/admin}:
+2024-06-17T19:06:01.210Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T19:06:01.210Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T19:06:01.211Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T19:06:01.211Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T19:06:01.211Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T19:06:01.211Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T19:06:01.211Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T19:06:01.211Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T19:06:01.212Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T19:06:01.212Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T19:06:01.212Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T19:06:01.212Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T19:06:01.212Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T19:06:01.212Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T19:06:01.212Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T19:06:01.213Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T19:06:01.213Z: 📢 TradeController {/api/trade}:
+2024-06-17T19:06:01.213Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T19:06:01.216Z: 📢 Nest application successfully started
+2024-06-17T19:08:51.505Z: 📢 Starting Nest application...
+2024-06-17T19:08:51.528Z: 📢 CommonModule dependencies initialized
+2024-06-17T19:08:51.528Z: 📢 MailerModule dependencies initialized
+2024-06-17T19:08:51.528Z: 📢 CsvModule dependencies initialized
+2024-06-17T19:08:51.528Z: 📢 MulterModule dependencies initialized
+2024-06-17T19:08:51.528Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:08:51.528Z: 📢 JwtModule dependencies initialized
+2024-06-17T19:08:51.529Z: 📢 HttpModule dependencies initialized
+2024-06-17T19:08:51.529Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T19:08:51.529Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:08:51.529Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:08:51.531Z: 📢 AppModule dependencies initialized
+2024-06-17T19:08:51.706Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T19:08:51.706Z: 📢 MailModule dependencies initialized
+2024-06-17T19:08:51.718Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T19:08:51.722Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:08:51.722Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:08:51.722Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:08:51.722Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:08:51.723Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:08:51.723Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:08:51.723Z: 📢 TradeModule dependencies initialized
+2024-06-17T19:08:51.723Z: 📢 ReferralModule dependencies initialized
+2024-06-17T19:08:51.723Z: 📢 TransactionModule dependencies initialized
+2024-06-17T19:08:51.723Z: 📢 WalletModule dependencies initialized
+2024-06-17T19:08:51.723Z: 📢 UserModule dependencies initialized
+2024-06-17T19:08:51.724Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T19:08:51.724Z: 📢 AdminModule dependencies initialized
+2024-06-17T19:08:52.136Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:08:52.136Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:08:52.137Z: 📢 AuthModule dependencies initialized
+2024-06-17T19:08:52.143Z: 📢 AppController {/api}:
+2024-06-17T19:08:52.146Z: 📢 Mapped {/api, GET} route
+2024-06-17T19:08:52.146Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T19:08:52.146Z: 📢 AuthController {/api/auth}:
+2024-06-17T19:08:52.147Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T19:08:52.147Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T19:08:52.148Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T19:08:52.149Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T19:08:52.149Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T19:08:52.149Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T19:08:52.149Z: 📢 UserController {/api/user}:
+2024-06-17T19:08:52.150Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T19:08:52.150Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T19:08:52.150Z: 📢 ReferralController {/api/referral}:
+2024-06-17T19:08:52.151Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T19:08:52.151Z: 📢 WalletController {/api/wallet}:
+2024-06-17T19:08:52.152Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T19:08:52.152Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T19:08:52.152Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T19:08:52.153Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T19:08:52.153Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T19:08:52.153Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T19:08:52.154Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T19:08:52.154Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T19:08:52.154Z: 📢 AdminController {/api/admin}:
+2024-06-17T19:08:52.155Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T19:08:52.155Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T19:08:52.155Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T19:08:52.155Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T19:08:52.156Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T19:08:52.156Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T19:08:52.156Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T19:08:52.156Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T19:08:52.156Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T19:08:52.156Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T19:08:52.157Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T19:08:52.157Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T19:08:52.157Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T19:08:52.157Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T19:08:52.157Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T19:08:52.157Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T19:08:52.157Z: 📢 TradeController {/api/trade}:
+2024-06-17T19:08:52.158Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T19:08:52.161Z: 📢 Nest application successfully started
+2024-06-17T19:14:10.463Z: 📢 Starting Nest application...
+2024-06-17T19:14:10.488Z: 📢 CommonModule dependencies initialized
+2024-06-17T19:14:10.489Z: 📢 MailerModule dependencies initialized
+2024-06-17T19:14:10.489Z: 📢 CsvModule dependencies initialized
+2024-06-17T19:14:10.489Z: 📢 MulterModule dependencies initialized
+2024-06-17T19:14:10.489Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:14:10.489Z: 📢 JwtModule dependencies initialized
+2024-06-17T19:14:10.489Z: 📢 HttpModule dependencies initialized
+2024-06-17T19:14:10.489Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T19:14:10.490Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:14:10.490Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:14:10.492Z: 📢 AppModule dependencies initialized
+2024-06-17T19:14:10.679Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T19:14:10.679Z: 📢 MailModule dependencies initialized
+2024-06-17T19:14:10.690Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T19:14:10.695Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:14:10.695Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:14:10.695Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:14:10.695Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:14:10.695Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:14:10.695Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:14:10.696Z: 📢 TradeModule dependencies initialized
+2024-06-17T19:14:10.696Z: 📢 ReferralModule dependencies initialized
+2024-06-17T19:14:10.696Z: 📢 TransactionModule dependencies initialized
+2024-06-17T19:14:10.696Z: 📢 WalletModule dependencies initialized
+2024-06-17T19:14:10.696Z: 📢 UserModule dependencies initialized
+2024-06-17T19:14:10.696Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T19:14:10.696Z: 📢 AdminModule dependencies initialized
+2024-06-17T19:14:14.460Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:14:14.460Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:14:14.461Z: 📢 AuthModule dependencies initialized
+2024-06-17T19:14:14.467Z: 📢 AppController {/api}:
+2024-06-17T19:14:14.470Z: 📢 Mapped {/api, GET} route
+2024-06-17T19:14:14.471Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T19:14:14.471Z: 📢 AuthController {/api/auth}:
+2024-06-17T19:14:14.471Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T19:14:14.472Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T19:14:14.473Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T19:14:14.473Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T19:14:14.473Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T19:14:14.474Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T19:14:14.474Z: 📢 UserController {/api/user}:
+2024-06-17T19:14:14.475Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T19:14:14.475Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T19:14:14.475Z: 📢 ReferralController {/api/referral}:
+2024-06-17T19:14:14.476Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T19:14:14.477Z: 📢 WalletController {/api/wallet}:
+2024-06-17T19:14:14.478Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T19:14:14.478Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T19:14:14.478Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T19:14:14.479Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T19:14:14.479Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T19:14:14.479Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T19:14:14.479Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T19:14:14.480Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T19:14:14.480Z: 📢 AdminController {/api/admin}:
+2024-06-17T19:14:14.480Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T19:14:14.480Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T19:14:14.480Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T19:14:14.481Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T19:14:14.481Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T19:14:14.481Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T19:14:14.481Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T19:14:14.481Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T19:14:14.481Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T19:14:14.482Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T19:14:14.482Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T19:14:14.482Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T19:14:14.482Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T19:14:14.482Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T19:14:14.482Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T19:14:14.482Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T19:14:14.482Z: 📢 TradeController {/api/trade}:
+2024-06-17T19:14:14.483Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T19:14:14.486Z: 📢 Nest application successfully started
+2024-06-17T19:32:49.223Z: 📢 Starting Nest application...
+2024-06-17T19:32:49.247Z: 📢 CommonModule dependencies initialized
+2024-06-17T19:32:49.247Z: 📢 MailerModule dependencies initialized
+2024-06-17T19:32:49.248Z: 📢 CsvModule dependencies initialized
+2024-06-17T19:32:49.248Z: 📢 MulterModule dependencies initialized
+2024-06-17T19:32:49.248Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:32:49.248Z: 📢 JwtModule dependencies initialized
+2024-06-17T19:32:49.248Z: 📢 HttpModule dependencies initialized
+2024-06-17T19:32:49.248Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T19:32:49.248Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:32:49.249Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:32:49.250Z: 📢 AppModule dependencies initialized
+2024-06-17T19:32:49.440Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T19:32:49.440Z: 📢 MailModule dependencies initialized
+2024-06-17T19:32:49.457Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T19:32:49.461Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:32:49.461Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:32:49.461Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:32:49.461Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:32:49.461Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:32:49.461Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:32:49.462Z: 📢 TradeModule dependencies initialized
+2024-06-17T19:32:49.462Z: 📢 ReferralModule dependencies initialized
+2024-06-17T19:32:49.462Z: 📢 TransactionModule dependencies initialized
+2024-06-17T19:32:49.463Z: 📢 WalletModule dependencies initialized
+2024-06-17T19:32:49.463Z: 📢 UserModule dependencies initialized
+2024-06-17T19:32:49.463Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T19:32:49.463Z: 📢 AdminModule dependencies initialized
+2024-06-17T19:32:49.898Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:32:49.898Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:32:49.899Z: 📢 AuthModule dependencies initialized
+2024-06-17T19:32:49.904Z: 📢 AppController {/api}:
+2024-06-17T19:32:49.907Z: 📢 Mapped {/api, GET} route
+2024-06-17T19:32:49.907Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T19:32:49.908Z: 📢 AuthController {/api/auth}:
+2024-06-17T19:32:49.908Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T19:32:49.909Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T19:32:49.909Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T19:32:49.909Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T19:32:49.909Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T19:32:49.910Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T19:32:49.910Z: 📢 UserController {/api/user}:
+2024-06-17T19:32:49.911Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T19:32:49.911Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T19:32:49.911Z: 📢 ReferralController {/api/referral}:
+2024-06-17T19:32:49.912Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T19:32:49.912Z: 📢 WalletController {/api/wallet}:
+2024-06-17T19:32:49.912Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T19:32:49.912Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T19:32:49.913Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T19:32:49.913Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T19:32:49.913Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T19:32:49.913Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T19:32:49.913Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T19:32:49.914Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T19:32:49.914Z: 📢 AdminController {/api/admin}:
+2024-06-17T19:32:49.914Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T19:32:49.914Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T19:32:49.914Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T19:32:49.914Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T19:32:49.915Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T19:32:49.915Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T19:32:49.915Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T19:32:49.915Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T19:32:49.915Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T19:32:49.915Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T19:32:49.915Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T19:32:49.916Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T19:32:49.916Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T19:32:49.916Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T19:32:49.916Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T19:32:49.916Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T19:32:49.916Z: 📢 TradeController {/api/trade}:
+2024-06-17T19:32:49.916Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T19:32:49.921Z: 📢 Nest application successfully started
+2024-06-17T19:37:05.870Z: 📢 Starting Nest application...
+2024-06-17T19:37:05.900Z: 📢 CommonModule dependencies initialized
+2024-06-17T19:37:05.900Z: 📢 MailerModule dependencies initialized
+2024-06-17T19:37:05.900Z: 📢 CsvModule dependencies initialized
+2024-06-17T19:37:05.900Z: 📢 MulterModule dependencies initialized
+2024-06-17T19:37:05.900Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:37:05.900Z: 📢 JwtModule dependencies initialized
+2024-06-17T19:37:05.900Z: 📢 HttpModule dependencies initialized
+2024-06-17T19:37:05.901Z: 📢 ConfigHostModule dependencies initialized
+2024-06-17T19:37:05.901Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:37:05.901Z: 📢 ConfigModule dependencies initialized
+2024-06-17T19:37:05.904Z: 📢 AppModule dependencies initialized
+2024-06-17T19:37:06.094Z: 📢 MailerCoreModule dependencies initialized
+2024-06-17T19:37:06.094Z: 📢 MailModule dependencies initialized
+2024-06-17T19:37:06.105Z: 📢 MongooseCoreModule dependencies initialized
+2024-06-17T19:37:06.109Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:37:06.109Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:37:06.109Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:37:06.110Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:37:06.110Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:37:06.110Z: 📢 MongooseModule dependencies initialized
+2024-06-17T19:37:06.111Z: 📢 TradeModule dependencies initialized
+2024-06-17T19:37:06.111Z: 📢 ReferralModule dependencies initialized
+2024-06-17T19:37:06.111Z: 📢 TransactionModule dependencies initialized
+2024-06-17T19:37:06.111Z: 📢 WalletModule dependencies initialized
+2024-06-17T19:37:06.111Z: 📢 UserModule dependencies initialized
+2024-06-17T19:37:06.111Z: 📢 ChallengeModule dependencies initialized
+2024-06-17T19:37:06.111Z: 📢 AdminModule dependencies initialized
+2024-06-17T19:37:06.541Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:37:06.541Z: 📢 CacheModule dependencies initialized
+2024-06-17T19:37:06.541Z: 📢 AuthModule dependencies initialized
+2024-06-17T19:37:06.547Z: 📢 AppController {/api}:
+2024-06-17T19:37:06.549Z: 📢 Mapped {/api, GET} route
+2024-06-17T19:37:06.550Z: 📢 Mapped {/api/country, GET} route
+2024-06-17T19:37:06.550Z: 📢 AuthController {/api/auth}:
+2024-06-17T19:37:06.550Z: 📢 Mapped {/api/auth/register, POST} route
+2024-06-17T19:37:06.551Z: 📢 Mapped {/api/auth/login, POST} route
+2024-06-17T19:37:06.551Z: 📢 Mapped {/api/auth/forgot-password, POST} route
+2024-06-17T19:37:06.552Z: 📢 Mapped {/api/auth/reset-password, PUT} route
+2024-06-17T19:37:06.552Z: 📢 Mapped {/api/auth/confirm-account, POST} route
+2024-06-17T19:37:06.552Z: 📢 Mapped {/api/auth/resend-confirm, POST} route
+2024-06-17T19:37:06.552Z: 📢 UserController {/api/user}:
+2024-06-17T19:37:06.553Z: 📢 Mapped {/api/user, PUT} route
+2024-06-17T19:37:06.553Z: 📢 Mapped {/api/user, GET} route
+2024-06-17T19:37:06.553Z: 📢 ReferralController {/api/referral}:
+2024-06-17T19:37:06.554Z: 📢 Mapped {/api/referral, GET} route
+2024-06-17T19:37:06.554Z: 📢 WalletController {/api/wallet}:
+2024-06-17T19:37:06.554Z: 📢 Mapped {/api/wallet/btc, PUT} route
+2024-06-17T19:37:06.555Z: 📢 Mapped {/api/wallet/eth, PUT} route
+2024-06-17T19:37:06.555Z: 📢 Mapped {/api/wallet, GET} route
+2024-06-17T19:37:06.556Z: 📢 Mapped {/api/wallet/withdraw, POST} route
+2024-06-17T19:37:06.556Z: 📢 TransactionController {/api/transaction}:
+2024-06-17T19:37:06.556Z: 📢 Mapped {/api/transaction, POST} route
+2024-06-17T19:37:06.557Z: 📢 Mapped {/api/transaction, GET} route
+2024-06-17T19:37:06.557Z: 📢 Mapped {/api/transaction/confirm/:transactionId, GET} route
+2024-06-17T19:37:06.557Z: 📢 AdminController {/api/admin}:
+2024-06-17T19:37:06.557Z: 📢 Mapped {/api/admin/confirm-transaction/:transactionId, GET} route
+2024-06-17T19:37:06.557Z: 📢 Mapped {/api/admin/decline-transaction/:transactionId, GET} route
+2024-06-17T19:37:06.557Z: 📢 Mapped {/api/admin/users, GET} route
+2024-06-17T19:37:06.557Z: 📢 Mapped {/api/admin/transactions, GET} route
+2024-06-17T19:37:06.558Z: 📢 Mapped {/api/admin/user/:userId/challenge, GET} route
+2024-06-17T19:37:06.558Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, GET} route
+2024-06-17T19:37:06.558Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trades, GET} route
+2024-06-17T19:37:06.558Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId, PUT} route
+2024-06-17T19:37:06.558Z: 📢 Mapped {/api/admin/user/:userId/challenge/:challengeId/trade, POST} route
+2024-06-17T19:37:06.558Z: 📢 Mapped {/api/admin/create-wallet/:userId, POST} route
+2024-06-17T19:37:06.558Z: 📢 Mapped {/api/admin/user/:userId/block, PUT} route
+2024-06-17T19:37:06.558Z: 📢 Mapped {/api/admin/user/:userId/delete, DELETE} route
+2024-06-17T19:37:06.559Z: 📢 ChallengeController {/api/challenge}:
+2024-06-17T19:37:06.559Z: 📢 Mapped {/api/challenge, POST} route
+2024-06-17T19:37:06.559Z: 📢 Mapped {/api/challenge, GET} route
+2024-06-17T19:37:06.559Z: 📢 Mapped {/api/challenge/:challengeId, GET} route
+2024-06-17T19:37:06.559Z: 📢 TradeController {/api/trade}:
+2024-06-17T19:37:06.559Z: 📢 Mapped {/api/trade/:challengeId, GET} route
+2024-06-17T19:37:06.562Z: 📢 Nest application successfully started
