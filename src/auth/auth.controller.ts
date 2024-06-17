@@ -28,8 +28,8 @@ export class AuthController {
   async confirmAccount(@Body() body) {
     return await this.authService.confirmAccount(body);
   }
-  @Post('resend-otp')
+  @Post('resend-confirm')
   async resendOtp(@Body() body) {
-    return await this.authService.resendOtp(body);
+    return await this.authService.resendConfirmationEmail(body);
   }
 }
