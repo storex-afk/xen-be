@@ -45,19 +45,16 @@ export class AdminController {
     const transaction = await this.transactionService.findOneByPayload({
       _id: transactionId,
     });
-    console.log(transaction)
+    console.log(transaction);
     const user = await this.userService.findOneByPayload({
       _id: transaction.userId,
     });
 
-    const referral = await this.referralService.findOneByPayload({
-      _id: user.refId,
-    });
+    if (user.refId) {
+    }
+
     let referralUser;
     if (referral) {
-      referralUser = await this.userService.findOneByPayload({
-        _id: referral.userId,
-      });
     }
 
     if (
@@ -74,7 +71,13 @@ export class AdminController {
         { status: ChallengeStatus.ONGOING },
       );
       //give 5% to referred person
-      if (referral) {
+      if (user.refId) {
+        const referral = await this.referralService.findOneByPayload({
+          _id: user.refId,
+        });
+        const referralUser = await this.userService.findOneByPayload({
+          _id: referral.userId,
+        });
         await this.walletService.updateByPayload(
           { userId: referral.userId },
           { $inc: { balance: 0.03 * Number(transaction.amount) } },
@@ -95,6 +98,7 @@ export class AdminController {
           createdTransaction.toObject(),
         );
       }
+
       return await this.emailService.sendTransactionStatus(user, {
         ...transaction.toObject(),
         status: TransactionStatus.SUCCESSFUL,
