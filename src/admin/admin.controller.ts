@@ -45,17 +45,9 @@ export class AdminController {
     const transaction = await this.transactionService.findOneByPayload({
       _id: transactionId,
     });
-    console.log(transaction);
     const user = await this.userService.findOneByPayload({
       _id: transaction.userId,
     });
-
-    if (user.refId) {
-    }
-
-    let referralUser;
-    if (referral) {
-    }
 
     if (
       transaction.type === TransactionType.DEPOSIT &&
