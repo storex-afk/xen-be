@@ -259,4 +259,30 @@ export class AdminController {
     return await this.emailService.sendInformation(user.toObject(), 'Deleted');
     // send email to user
   }
+
+  @Put('balance/:userId')
+  async updateBalance(@Body() body, @Param('userId') _id) {
+    const userId = new ObjectId(_id);
+
+    // Combine findOneByPayload and updateByPayload into a transaction
+    if (body.type === 'loss') {
+      this.challengeService.updateByPayload(
+        { _id: new ObjectId(body.challenge) },
+        { $inc: { loss: +Number(body.amount) } },
+      );
+      await this.walletService.updateByPayload(
+        { userId: new ObjectId(userId) },
+        { $inc: { balance: -Number(body.amount) } },
+      );
+    } else {
+      this.challengeService.updateByPayload(
+        { _id: new ObjectId(body.challenge) },
+        { $inc: { profit: +Number(body.amount) } },
+      );
+      await this.walletService.updateByPayload(
+        { userId: new ObjectId(userId) },
+        { $inc: { balance: +Number(body.amount) } },
+      );
+    }
+  }
 }
